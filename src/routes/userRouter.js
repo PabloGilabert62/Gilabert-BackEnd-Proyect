@@ -18,13 +18,13 @@ userRouter.post("/", async (req, res) => {
         const {name, lastname, email, age} = req.body
 
         console.log(name, lastname, email, age)
-        const resultado = await userModel.create({
+        const result = await userModel.create({
             name,
             lastname,
             email,
             age
         })
-        res.send({result: "succes", resultado : resultado})
+        res.send({result: "succes", result : result})
     } catch (error) {
         res.send("Error in users: " + error.message)
     }
